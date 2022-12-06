@@ -4,7 +4,7 @@ def menu(dic):
 	for a,b in dic.items():
 		print(f'{a}. {b}')
 	print('4. Salir')
-	print()
+	print('Jugaremos piedra, papel o tijera?')
 
 def ingreso_num_2(dic):
 	menu(dic)
@@ -22,9 +22,10 @@ def juego_2(dic):
 	v,e,d=0,0,0
 	cond=True
 	while cond:
-
+  
 		opcion=ingreso_num_2(dic)
-		opcion_computador = rd.randint(1, 3)
+		import random 
+		opcion_computador = random.randint(1, 3)
 		desicion=''
 
 		if opcion==opcion_computador:
@@ -65,5 +66,3 @@ def juego_2(dic):
 			print()
 
 juego_2(dic)
-
-
